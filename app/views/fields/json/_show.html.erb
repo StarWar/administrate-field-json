@@ -17,6 +17,11 @@ By default, the attribute is rendered as an image tag.
 
 
 
-<%=  JSON.pretty_generate(field.data || []) %>
+<%#=  JSON.pretty_generate(field.data || []) %>
 
 
+
+<div class="administrate-jsonviewer">
+<textarea name="<%= field.attribute %>"><%= field.data.to_json.html_safe.squish  %></textarea>
+	
+</div>
